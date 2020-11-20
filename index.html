@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>My weather app</title>
-</head>
-
-<body>
-  <!-- Retrieved data will be dumped here -->
-  <input id='city' type="text">
-  <button>Search</button>
-  <div class="city"></div>
-  <div class="wind"></div>
-  <div class="humidity"></div>
-  <div class="temp"></div>
-  <div class="tempC"></div>
-  <div class="tempK"></div>
-  <div class="tempcontent"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src='app.js'>
-
-  </script>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>My weather app</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <form>
+            <label>Search for a City:</label>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  placeholder="City"
+                />
+              </div>
+              <div class="col-3" id="btn-wrapper">
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-2"
+                  id="search-btn"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="search-history"></div>
+        </div>
+        <div class="col-8" id="display-weather">
+          <div class="card">
+            <div class="card-body" id="current-weather"></div>
+          </div>
+          <div>
+            <h2>5 day Forecast:</h2>
+          </div>
+          <div class="card-deck" id="fiveday-forecast"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
+<!-- 
+<div class="city"></div>
+<div class="wind"></div>
+<div class="humidity"></div>
+<div class="temp"></div>
+<div class="tempC"></div>
+<div class="tempK"></div>
+<div class="tempcontent"></div> -->
