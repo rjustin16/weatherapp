@@ -33,7 +33,6 @@ $("#search-btn").on("click", function () {
      $("#current-weather").empty();
     $($weatherdiv).append($wind, $humidity, $temp, getUVindex());
     $("#current-weather").prepend($weatherdiv);
-    // getUVindex();
   });
   let forecastURL = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=imperial&APPID=${APIKey}`;
 $.ajax({
@@ -53,10 +52,7 @@ $.ajax({
         const $fivehumid = $("<p>").text("Temp: " + forecast.main.humidity);
         $fivediv.append($fivedate, $fivetemp, $fiveicon, $fivehumid);
         $("#fiveday-forecast").append($fivediv);
-        forecast.main.humidity
     });
-
-  
 })
 });
 $("#btn-wrapper").on("click", function (e) {
