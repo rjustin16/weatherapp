@@ -20,7 +20,7 @@ $("#search-btn").on("click", function () {
         method: "GET",
       }).then(function (data) {
         let currentUV = $("<p>").text('UV Index: ' + data.value);
-        $("#current-weather").prepend(currentUV);
+        $("#current-weather").append(currentUV);
       });
     }
     console.log(queryURL);
@@ -44,7 +44,6 @@ $.ajax({
         array.push(response.list[i]);
         $("#fiveday-forecast").empty();
         $.each(array, function (i, forecast) {
-          
             const $fivediv = $('<div>').attr('class', 'card p-2 text-white bg-primary');
             const $fivedate = $("<h3>").text(new Date(forecast.dt * 1000).toLocaleDateString("en-US"));
             const $fivetemp = $("<p>").text("Temp: " + forecast.main.temp);
@@ -54,7 +53,6 @@ $.ajax({
             $("#fiveday-forecast").append($fivediv);
         });
     };
-
 })
 });
 $("#btn-wrapper").on("click", function (e) {
