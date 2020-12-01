@@ -40,6 +40,7 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     let array = [];
+    console.log(response)
     for (let i = 0; i < response.list.length; i +=9) {
         array.push(response.list[i]);
         $("#fiveday-forecast").empty();
@@ -54,6 +55,14 @@ $.ajax({
         });
     };
 })
+makeList();
+function makeList() {
+  let savecity = $('<li>').addClass('list-group-item').text(city);
+  $('.list').append(savecity);
+}
+});
+$("#clear-btn").on("click", function (e) {
+  $(".list").empty();
 });
 $("#btn-wrapper").on("click", function (e) {
     e.preventDefault();

@@ -24,18 +24,24 @@
             <h1>Search for a City</h1>
             <div class="row">
               <div class="col-9">
+                
                 <input type="text" id="city">
+                <div class="list"></div>
               </div>
+              
               <div id="btn-wrapper">
-                <button type="submit" class="btn btn-primary mb-2" id="search-btn">Search</button>
+                <div><button type="submit" class="btn btn-primary mb-2" id="search-btn">Search</button></div>
+                <div><button class="btn btn-primary mb-2" id='clear-btn'>Clear</button></div>
               </div>
             </div>
           </form>
         </div>
+        
         <div class="col-8" id="display-weather">
           <div class="card body">
-            <div class="card-body" id="current-weather"></div>
+            <div class="card body" id="current-weather"></div>
           </div>
+          
           <div>
             <h2>5 day Forecast:</h2>
           </div>
