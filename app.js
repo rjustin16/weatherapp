@@ -47,9 +47,9 @@ $.ajax({
         $.each(array, function (i, forecast) {
             const $fivediv = $('<div>').attr('class', 'card p-2 text-white bg-primary');
             const $fivedate = $("<h3>").text(new Date(forecast.dt * 1000).toLocaleDateString("en-US"));
-            const $fivetemp = $("<p>").text("Temp: " + forecast.main.temp);
+            const $fivetemp = $("<h5>").text("Temp: " + forecast.main.temp);
             const $fiveicon = $(`<img src="https://api.openweathermap.org/img/w/${forecast.weather[0].icon}.png"/>`)
-            const $fivehumid = $("<p>").text("Humidity: " + forecast.main.humidity + '%');
+            const $fivehumid = $("<h5>").text("Humidity: " + forecast.main.humidity + '%');
             $fivediv.append($fivedate, $fivetemp, $fiveicon, $fivehumid);
             $("#fiveday-forecast").append($fivediv);
         });

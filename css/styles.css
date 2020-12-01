@@ -1,0 +1,21 @@
+.body{
+    min-width: 300px;
+    min-height: 200px;
+   
+  }
+  body {
+background-image: url("https://us.123rf.com/450wm/damianpalus/damianpalus0804/damianpalus080400008/2852764-fulmine-generici-a-sfondo-nero-.jpg?ver=6");
+    color: rgb(48, 125, 226);
+}
+h1, h2, h3, h5 {
+ color: gold;
+}
+.col{
+background-color: gold;
+}
+.card, .list-group-item{
+background-color: gold;
+}
+.card-deck, p{
+color: rgb(48, 125, 226);
+}
